@@ -1,0 +1,59 @@
+            var test = _db.FactStaffWithHistories.Where(s => s.idEmployee == 2919 && (s.DateEnd == null || s.DateEnd >= _timeSheet.DateBeginPeriod) &&
+                     s.DateBegin <= _timeSheet.DateEndPeriod && s.idTypeWork != IdWorkTypeSovmeshenie &&
+                     s.idTypeWork != IdWorkTypePochesovik && s.idTypeWork != IdWorkTypeIspOb).Distinct().ToArray();
+
+2016-09-23 11:44:33.900
+
+1:
+  <Table Name="ShemaTabel.FactStaffWithHistory" Member="FactStaffWithHistories">
+    <Type Name="FactStaffWithHistory">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StaffCount" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="HourCount" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="HourSalary" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="idPlanStaff" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idEmployee" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idBeginPrikaz" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idEndPrikaz" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idTypeWork" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateBegin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsReplacement" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="idFactStaffHistory" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDShedule" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idSalaryKoeff" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idlaborcontrakt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idreason" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HourStaffCount" Type="System.Decimal" DbType="Decimal(6,4)" CanBeNull="true" />
+      <Column Name="CalcStaffCount" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="IdWorkShedule" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+
+  <Table Name="dbo.FactStaffWithHistory" Member="FactStaffWithHistories">
+    <Type Name="FactStaffWithHistory">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StaffCount" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="HourCount" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="HourSalary" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="idPlanStaff" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idEmployee" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idBeginPrikaz" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idEndPrikaz" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idTypeWork" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateBegin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsReplacement" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="idFactStaffHistory" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDShedule" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idSalaryKoeff" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idlaborcontrakt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idreason" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HourStaffCount" Type="System.Decimal" DbType="Decimal(6,4)" CanBeNull="true" />
+      <Column Name="CalcStaffCount" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="idOKVED" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idFundingCenter" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idDepartment" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WorkHoursInWeek" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+    </Type>
+  </Table>

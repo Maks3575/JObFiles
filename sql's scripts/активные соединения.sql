@@ -1,0 +1,1 @@
+select * from master..sysprocesses where dbid = db_id('UGTU')
